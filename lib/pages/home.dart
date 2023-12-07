@@ -10,15 +10,20 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.blueGrey,
         body: SafeArea(
             child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                padding: const EdgeInsets.symmetric(vertical: 50),
                 child: Column(children: [
                   Row(children: [
                     Expanded(
                       child: Container(
-                          height: 100, width: 100, color: Colors.black, child: Text("Text")),
+                          height: 180,
+                          color: Colors.black,
+                          child: Marquee(
+                            text: "Text",
+                            style: const TextStyle(color: Colors.green, fontSize: 150),
+                          )),
                     )
                   ]),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 25),
                   const TextField(
                     autofocus: true,
                     decoration: InputDecoration(
